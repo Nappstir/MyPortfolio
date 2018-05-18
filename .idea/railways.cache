@@ -1,4 +1,15 @@
                    Prefix Verb   URI Pattern                                                                              Controller#Action
+               portfolios GET    /portfolios(.:format)                                                                    portfolios#index
+                          POST   /portfolios(.:format)                                                                    portfolios#create
+            new_portfolio GET    /portfolios/new(.:format)                                                                portfolios#new
+           edit_portfolio GET    /portfolios/:id/edit(.:format)                                                           portfolios#edit
+                portfolio GET    /portfolios/:id(.:format)                                                                portfolios#show
+                          PATCH  /portfolios/:id(.:format)                                                                portfolios#update
+                          PUT    /portfolios/:id(.:format)                                                                portfolios#update
+                          DELETE /portfolios/:id(.:format)                                                                portfolios#destroy
+               pages_home GET    /pages/home(.:format)                                                                    pages#home
+              pages_about GET    /pages/about(.:format)                                                                   pages#about
+            pages_contact GET    /pages/contact(.:format)                                                                 pages#contact
                     blogs GET    /blogs(.:format)                                                                         blogs#index
                           POST   /blogs(.:format)                                                                         blogs#create
                  new_blog GET    /blogs/new(.:format)                                                                     blogs#new
