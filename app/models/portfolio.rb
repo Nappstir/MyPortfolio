@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
   after_initialize :set_defaults
 
@@ -9,7 +10,7 @@ class Portfolio < ApplicationRecord
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'RoR') }
 
   def set_defaults
-    self.main_image ||= "http://via.placeholder.com/600x400"
-    self.thumb_image ||= "http://via.placeholder.com/350x200"
+    self.main_image ||= Placeholder.image_generator('600', '400')
+    self.thumb_image ||= Placeholder.image_generator('350', '200')
   end
 end
