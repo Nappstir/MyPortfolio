@@ -13,4 +13,8 @@ module ApplicationHelper
     greeting = "Thanks for visiting me from #{session[:source]}, you are on the #{layout_name} layout."
     content_tag(:div, greeting, class: 'source-greeting') if session[:source]
   end
+
+  def copyright_generator
+    NappyViewTool::Renderer.copyright('Travis Siebenhaar', 'All rights reserved')
+  end
 end
