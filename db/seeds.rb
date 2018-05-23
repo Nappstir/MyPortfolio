@@ -44,3 +44,11 @@ end
     name: "Technology #{technology}"
   )
 end
+
+3.times do |user|
+  User.create!(
+    name: "User#{user}",
+    email: "user@#{user}.com",
+    password: 'testing'
+  )
+end
