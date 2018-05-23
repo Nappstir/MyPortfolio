@@ -10,4 +10,4 @@
 <% end %>
 
 <p><%= link_to 'back', portfolios_path %></p>
-<p><%= link_to 'edit', edit_portfolio_path(@portfolio_item.id) %></p>
+<p><%= link_to 'edit', edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %></p>
